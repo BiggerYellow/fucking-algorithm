@@ -1,9 +1,11 @@
 ﻿// LeetCode.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 
-#include "hammingDistance.cpp"
-#include "twoEggDrop.cpp"
+#include "findMaxForm.cpp"
 #include <iostream>
+
+using namespace std;
+extern int findMaxForm(vector<string>& strs, int m, int n);
 
 int main()
 {
@@ -12,8 +14,8 @@ int main()
     //Solution b;
     //vector<int> nums = { 1,2,3,1 };
 
-    Soultion a;
-    printf("%d", a.twoEggDrop(2));
+    vector<string> strs = { "10", "0001", "111001", "1", "0" };
+    printf("%d", findMaxForm(strs, 3,4));
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

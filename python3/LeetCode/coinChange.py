@@ -1,0 +1,16 @@
+from typing import List
+
+
+class Solution:
+    def coinChange(self, coins: List[int], amount:int) -> int:
+        max = amount+1
+        dp = [max]*(amount+1)
+        dp[0]=0
+        for coin in coins:
+            for j in range(coin, amount+1):
+                dp[j]=min(dp[j], dp[j-coin]+1)
+
+        if dp[amount]==max:
+            return -1
+        else:
+            return dp[amount]

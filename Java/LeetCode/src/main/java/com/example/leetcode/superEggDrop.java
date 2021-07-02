@@ -1,5 +1,8 @@
 package com.example.leetcode;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @author huangchunchen
  * @date 2021/6/10 11:16
@@ -37,10 +40,123 @@ package com.example.leetcode;
  */
 public class superEggDrop {
     public static void main(String[] args) {
-
+        System.out.println(superEggDrop4(3,14));
     }
 
-    public int superEggDrop(int k, int n) {
-        return 0;
+    //递归 超时
+    //时间复杂度:O(k*n^2)
+    public static int superEggDrop(int k, int n) {
+        return dp(k,n);
     }
-}
+
+    public static int dp(int k, int n){
+        if (k==1) return n;
+        if (n==0) return 0;
+        int res=Integer.MAX_VALUE;
+        for (int i=1;i<=n;i++){
+            res = Math.min(res, Math.max(dp(k-1, i-1), dp(k,n-i))+1);
+        }
+        return res;
+    }
+
+    //备忘录
+    public static int superEggDrop1(int k, int n){
+        return dp1(k,n);
+    }
+    public static Map<Integer, Integer> map = new HashMap<>();
+    public static int dp1(int k,int n){
+        if (k==1) return n;
+        if (n==0)return 0;
+        int res=Integer.MAX_VALUE;
+        Integer key=k*100+n;
+        if (map.containsKey(key)){
+            return map.get(key);
+        }
+        for (int i=1;i<=n;i++){
+            res = Math.min(res, Math.max(dp(k-1, i-1), dp(k, n-i))+1);
+            map.put(key, res);
+        }
+        return res;
+    }
+
+
+    //备忘录+二分搜索
+    public static int superEggDrop2(int k, int n){
+        return dp2(k,n);
+    }
+    public static int dp2(int k,int n){
+        if (k==1) return n;
+        if (n==0)return 0;
+        int res=Integer.MAX_VALUE;
+        Integer key=k*100+n;
+        if (map.containsKey(key)){
+            return map.get(key);
+        }
+        int lo=1,hi=n;
+        while (lo+1<hi){
+            int mid = lo + (hi-lo)/2;
+            int broken = dp2(k-1, mid-1);
+            int noBroken = dp2(k, n-mid);
+            if (broken>noBroken){
+                hi=mid;
+            }else if (broken<noBroken){
+                lo=mid;
+            }
+            res = 1+Math.min(Math.max(dp(k-1, hi-1), dp(k, n-hi)), Math.max(dp(k-1,lo-1), dp(k, n-lo)));
+            map.put(key, res);
+        }
+
+        return res;
+    }
+
+    public static int superEggDrop3(int k, int n) {
+        int[][] dp = new int[k+1][n+1];
+        int m=0;
+        while (dp[k][m]<n){
+            m++;
+            for (int j=1;j<=k;j++){
+                dp[j][m] = dp[j][m-1] + dp[j-1][m-1]+1;
+            }
+        }
+        return m;
+    }
+
+    static Map<Integer, Integer> memo = new HashMap<Integer, Integer>();
+
+    public static int superEggDrop4(int k, int n) {
+        return dp4(k, n);
+    }
+
+    public static int dp4(int k, int n) {
+        if (!memo.containsKey(n * 100 + k)) {
+            int ans;
+            if (n == 0) {
+                ans = 0;
+            } else if (k == 1) {
+                ans = n;
+            } else {
+                int lo = 1, hi = n;
+                while (lo + 1 < hi) {
+                    int x = (lo + hi) / 2;
+                    int t1 = dp4(k - 1, x - 1);
+                    int t2 = dp4(k, n - x);
+
+                    if (t1 < t2) {
+                        lo = x;
+                    } else if (t1 > t2) {
+                        hi = x;
+                    } else {
+                        lo = hi = x;
+                    }
+                }
+
+                ans = 1 + Math.min(Math.max(dp(k - 1, lo - 1), dp(k, n - lo)), Math.max(dp(k - 1, hi - 1), dp(k, n - hi)));
+            }
+
+            memo.put(n * 100 + k, ans);
+        }
+
+        return memo.get(n * 100 + k);
+    }
+
+    }

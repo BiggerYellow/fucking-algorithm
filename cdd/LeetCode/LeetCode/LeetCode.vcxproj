@@ -139,12 +139,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="canPartition.cpp" />
     <ClCompile Include="change.cpp" />
+    <ClCompile Include="coinChange.cpp" />
+    <ClCompile Include="convertToTitle.cpp" />
+    <ClCompile Include="findMaxForm.cpp" />
     <ClCompile Include="getIntersectionNode.cpp" />
     <ClCompile Include="hammingDistance.cpp" />
     <ClCompile Include="lastStoneWeightII.cpp" />
     <ClCompile Include="LeetCode.cpp" />
     <ClCompile Include="ListNode.cpp" />
+    <ClCompile Include="maxIceCream.cpp" />
+    <ClCompile Include="openLock.cpp" />
     <ClCompile Include="rob.cpp" />
     <ClCompile Include="rob1.cpp" />
     <ClCompile Include="totalHammingDistance.cpp" />

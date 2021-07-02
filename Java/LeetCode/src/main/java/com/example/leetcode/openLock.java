@@ -120,4 +120,46 @@ public class openLock {
         }
         return new String(chars);
     }
-}
+
+    //双向BFS遍历 分别从头结点和目标节点开始遍历，记录两个集合,直到两个集合中有为止
+    public int openLock1(String[] deadends, String target) {
+        List<String> dead = new ArrayList<>();
+        for (String s:deadends){
+            dead.add(s);
+        }
+        Set<String> visit = new HashSet<>();
+        Set<String> queue1 = new HashSet<>();
+        Set<String> queue2 = new HashSet<>();
+        queue1.add("0000");
+        queue2.add(target);
+        int step=0;
+        while (!queue1.isEmpty() && !queue2.isEmpty()){
+            Set<String> temp = new HashSet<>();
+            for (String cur:queue1){
+                if (dead.contains(cur)){
+                    continue;
+                }
+                if (queue2.contains(cur)){
+                    return step;
+                }
+                visit.add(cur);
+
+                for (int i=0;i<4;i++){
+                    String add = addOnce(cur,i);
+                    if (!visit.contains(add)){
+                        temp.add(add);
+                    }
+                    String min = minOnce(cur, i);
+                    if (!visit.contains(min)){
+                        temp.add(min);
+                    }
+                }
+            }
+            step++;
+            //交换两个集合
+            queue1 = queue2;
+            queue2 = temp;
+        }
+        return -1;
+    }
+    }
