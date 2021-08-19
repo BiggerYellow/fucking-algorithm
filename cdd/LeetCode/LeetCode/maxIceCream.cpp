@@ -27,7 +27,7 @@ public:
 
 
 
-	int maxIceCream(vector<int>& costs, int coins)
+	int maxIceCream1(vector<int>& costs, int coins)
 	{
 		vector<int> temp = vector<int>(100001);
 		for (int i = 0; i < costs.size(); i++)

@@ -50,7 +50,7 @@ public:
 		return -1;
 	}
 
-	int openLock(vector<string>& deadends, string target) {
+	int openLock1(vector<string>& deadends, string target) {
 		unordered_set<string> dead(deadends.begin(), deadends.end());
 		unordered_set<string> visit;
 		vector<string> queue1;

@@ -66,5 +66,61 @@
     <ClCompile Include="maxIceCream.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="longestCommonSubsequence.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="majorityElement.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hIndex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="longestPalindromeSubseq.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="maximumElementAfterDecrementingAndRearranging.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stoneGame.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="search.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="maxFrequency.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="minPairSum.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="isCovered.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="maximumTime.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lengthOfLIS.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="numberOfArithmeticSlices.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="countArrangement.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BubbleSort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="QuickSort.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="reverseVowels.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LeetCode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

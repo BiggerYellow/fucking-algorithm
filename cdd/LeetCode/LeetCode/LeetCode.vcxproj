@@ -139,23 +139,43 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BubbleSort.cpp" />
     <ClCompile Include="canPartition.cpp" />
     <ClCompile Include="change.cpp" />
     <ClCompile Include="coinChange.cpp" />
     <ClCompile Include="convertToTitle.cpp" />
+    <ClCompile Include="countArrangement.cpp" />
     <ClCompile Include="findMaxForm.cpp" />
     <ClCompile Include="getIntersectionNode.cpp" />
     <ClCompile Include="hammingDistance.cpp" />
+    <ClCompile Include="hIndex.cpp" />
+    <ClCompile Include="isCovered.cpp" />
     <ClCompile Include="lastStoneWeightII.cpp" />
     <ClCompile Include="LeetCode.cpp" />
+    <ClCompile Include="lengthOfLIS.cpp" />
     <ClCompile Include="ListNode.cpp" />
+    <ClCompile Include="longestCommonSubsequence.cpp" />
+    <ClCompile Include="longestPalindromeSubseq.cpp" />
+    <ClCompile Include="majorityElement.cpp" />
+    <ClCompile Include="maxFrequency.cpp" />
     <ClCompile Include="maxIceCream.cpp" />
+    <ClCompile Include="maximumElementAfterDecrementingAndRearranging.cpp" />
+    <ClCompile Include="maximumTime.cpp" />
+    <ClCompile Include="minPairSum.cpp" />
+    <ClCompile Include="numberOfArithmeticSlices.cpp" />
     <ClCompile Include="openLock.cpp" />
+    <ClCompile Include="QuickSort.cpp" />
+    <ClCompile Include="reverseVowels.cpp" />
     <ClCompile Include="rob.cpp" />
     <ClCompile Include="rob1.cpp" />
+    <ClCompile Include="search.cpp" />
+    <ClCompile Include="stoneGame.cpp" />
     <ClCompile Include="totalHammingDistance.cpp" />
     <ClCompile Include="TreeNode.cpp" />
     <ClCompile Include="twoEggDrop.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LeetCode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

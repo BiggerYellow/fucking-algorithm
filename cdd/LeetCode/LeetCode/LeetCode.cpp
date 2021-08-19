@@ -1,11 +1,15 @@
 ﻿// LeetCode.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 
-#include "findMaxForm.cpp"
 #include <iostream>
+#include "LeetCode.h"
+//#include "QuickSort.cpp"
+#include "reverseVowels.cpp"
+//#include "BubbleSort.cpp"
 
 using namespace std;
-extern int findMaxForm(vector<string>& strs, int m, int n);
+//extern int findMaxForm(vector<string>& strs, int m, int n);
+//extern void bubbleSort1(vector<int>& nums);
 
 int main()
 {
@@ -14,8 +18,16 @@ int main()
     //Solution b;
     //vector<int> nums = { 1,2,3,1 };
 
-    vector<string> strs = { "10", "0001", "111001", "1", "0" };
-    printf("%d", findMaxForm(strs, 3,4));
+    //vector<string> strs = { "10", "0001", "111001", "1", "0" };
+   // printf("%d", findMaxForm(strs, 3,4));
+    Solution b;
+    cout << b.reverseVowels("LeetCode") << endl;
+  /*  vector<int> nums = { 3,1,2,6,4 };
+    b.quickSort(nums, 0, nums.size()-1);
+    for (auto i:nums)
+    {
+        cout << i << endl;
+    }*/
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
