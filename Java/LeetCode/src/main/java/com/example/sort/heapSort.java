@@ -7,13 +7,13 @@ package com.example.sort;
  */
 public class heapSort {
     public static void main(String[] args) {
-        int[] nums = {2,5,3,7,6};
-        int[] heapsort = heapsort1(nums);
+        int[] nums = {7,5,3,2,6};
+        int[] heapsort = heapSort1(nums);
         System.out.println(heapsort);
     }
 
     //头节点从1开始 即左节点为2*i 右节点 2*i+1
-    public static int[] heapsort(int[] nums){
+    public static int[] heapSort(int[] nums){
         int len =nums.length;
         int[] temp = new int[len+1];
         for (int i=0;i<len;i++){
@@ -36,9 +36,9 @@ public class heapSort {
     }
 
     public static void sink(int[] nums, int k, int end){
-        while (2*k <= end){
+        while (2*k < end){
             int j=2*k;
-            if (j+1<=end && nums[j+1] > nums[j]){
+            if (j+1<end && nums[j+1] > nums[j]){
                 j++;
             }
             if (nums[j]<nums[k]){
@@ -51,24 +51,17 @@ public class heapSort {
 
 
     //头节点从0开始 即左节点为2*i+1 右节点 2*i+2
-    public static int[] heapsort1(int[] nums){
+    public static int[] heapSort1(int[] nums){
         int len =nums.length;
-
-        for (int i=len/2-1;i>=0;i--){
+        //1.构建堆
+        for (int i=len/2;i>=0;i--){
             sink1(nums, i, len);
         }
-
-
         //2.调整堆结构+交换堆顶元素与末尾元素
-        for(int j=nums.length-1;j>0;j--){
-            swap(nums,0,j);//将堆顶元素与末尾元素进行交换
-            sink1(nums,0,j);//重新对堆进行调整
+        while (len>1){
+            swap(nums, 0, --len);
+            sink1(nums,0,len);
         }
-//        while (len>0){
-//            --len;
-//            swap(nums, 0, len);
-//            sink1(nums,0,len);
-//        }
         return nums;
     }
 
@@ -91,4 +84,6 @@ public class heapSort {
         nums[i]=nums[j];
         nums[j]=temp;
     }
+
+
 }

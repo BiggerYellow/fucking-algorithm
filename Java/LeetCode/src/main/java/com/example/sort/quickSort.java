@@ -7,8 +7,8 @@ package com.example.sort;
  */
 public class quickSort {
     public static void main(String[] args) {
-        int[] nums = {1,3,2,7,5};
-        quickSort(nums, 0, nums.length-1);
+        int[] nums = {1,3,2,7,5,2,5};
+        quick3way(nums, 0, nums.length-1);
         System.out.println(nums);
     }
 
@@ -70,5 +70,24 @@ public class quickSort {
         int temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;
+    }
+
+    public static void quick3way(int[] nums, int lo, int hi){
+        if (hi<=lo){
+            return;
+        }
+        int lt=lo, i=lo+1,gt=hi;
+        int v = nums[lo];
+        while (i<=gt){
+            if (nums[i]<v){
+                exchange(nums, lt++,i++);
+            }else if (nums[i]>v){
+                exchange(nums, i, gt--);
+            }else {
+                i++;
+            }
+        }
+        quick3way(nums, lo, lt-1);
+        quick3way(nums,gt+1, hi);
     }
 }

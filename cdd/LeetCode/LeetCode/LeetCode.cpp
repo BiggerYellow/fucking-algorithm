@@ -4,8 +4,8 @@
 #include <iostream>
 #include "LeetCode.h"
 //#include "QuickSort.cpp"
-#include "reverseVowels.cpp"
-//#include "BubbleSort.cpp"
+//#include "mergeSort.cpp"
+#include "radixSort.cpp"
 
 using namespace std;
 //extern int findMaxForm(vector<string>& strs, int m, int n);
@@ -20,8 +20,14 @@ int main()
 
     //vector<string> strs = { "10", "0001", "111001", "1", "0" };
    // printf("%d", findMaxForm(strs, 3,4));
+
     Solution b;
-    cout << b.reverseVowels("LeetCode") << endl;
+    vector<int> nums = { 31,14,76,54,24,123,534 };
+    b.radixSort(nums, 3);
+    for (auto i : nums)
+    {
+        cout << i << endl;
+    }
   /*  vector<int> nums = { 3,1,2,6,4 };
     b.quickSort(nums, 0, nums.size()-1);
     for (auto i:nums)
