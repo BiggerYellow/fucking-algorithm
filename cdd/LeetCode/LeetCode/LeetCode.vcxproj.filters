@@ -141,6 +141,45 @@
     <ClCompile Include="numRescueBoats.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="treeTraverse.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="eraseOverlapIntervals.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="corpFlightBookings.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="findMinArrowShots.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BinarySearch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="canJump.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="balancedStringSplit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="merge.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="findMaximizedCapital.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="insert.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chalkReplacer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="findPeakElement.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="rotateRight.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LeetCode.h">

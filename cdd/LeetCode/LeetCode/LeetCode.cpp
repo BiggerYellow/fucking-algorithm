@@ -3,9 +3,10 @@
 
 #include <iostream>
 #include "LeetCode.h"
-//#include "QuickSort.cpp"
+#include "QuickSort.cpp"
 //#include "mergeSort.cpp"
-#include "radixSort.cpp"
+//include "treeTraverse.cpp"
+//#include "BinarySearch.cpp"
 
 using namespace std;
 //extern int findMaxForm(vector<string>& strs, int m, int n);
@@ -22,18 +23,45 @@ int main()
    // printf("%d", findMaxForm(strs, 3,4));
 
     Solution b;
-    vector<int> nums = { 31,14,76,54,24,123,534 };
-    b.radixSort(nums, 3);
+    vector<int> nums = { 1,3,2,7,5 };
+    b.quickSort1(nums, 0, nums.size());
     for (auto i : nums)
     {
         cout << i << endl;
     }
-  /*  vector<int> nums = { 3,1,2,6,4 };
-    b.quickSort(nums, 0, nums.size()-1);
-    for (auto i:nums)
-    {
-        cout << i << endl;
-    }*/
+
+    //Solution b;
+    //vector<int> nums = { 1,3,4,5,7,9 };
+    //printf("%d", b.binarySearch(nums, 4));
+
+
+        //Solution b;
+        //TreeNode node1 = TreeNode(1);
+        //TreeNode node2 = TreeNode(2);
+        //TreeNode node3 = TreeNode(3);
+        //TreeNode node4 = TreeNode(4);
+        //TreeNode node5 = TreeNode(5);
+        //TreeNode node6 = TreeNode(6);
+        //TreeNode node7 = TreeNode(7);
+        //node1.left = &node2;
+        //node1.right = &node3;
+        //node2.left = &node4;
+        //node2.right = &node5;
+        //node3.left = &node6;
+        //node3.right = &node7;
+        //vector<int> res = b.sortBFS(&node1);
+        //for (auto i:res)
+        //{
+        //    cout << i << endl;
+        //}
+
+      /*  vector<int> nums = { 3,1,2,6,4 };
+        b.quickSort(nums, 0, nums.size()-1);
+        for (auto i:nums)
+        {
+            cout << i << endl;
+        }*/
+       
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

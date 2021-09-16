@@ -8,7 +8,7 @@ package com.example.labaladong;
 public class binarySearch {
     public static void main(String[] args) {
         int[] array = new int[]{1,3,4,4,4,4,6,8,11,14,23};
-        System.out.println(binarySearchRight(array, 3));
+        System.out.println(binarySearch(array, 8));
     }
 
     public static int binarySearch(int[] array, int target){
