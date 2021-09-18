@@ -69,4 +69,26 @@ public class isValidSudoku {
         }
         return true;
     }
+
+    public static boolean isValidSudoku1(char[][] board) {
+        int[][] row = new int[9][9];
+        int[][] colum = new int[9][9];
+        int[][][] subBoxs = new int[3][3][9];
+
+        for (int i=0;i<board.length;i++){
+            for (int j=0;j<board[i].length;j++){
+                char temp = board[i][j];
+                if (temp != '.'){
+                    int value = temp - '0';
+                    row[i][value]++;
+                    colum[j][value]++;
+                    subBoxs[i/3][j/3][value]++;
+                    if (row[i][value]>1 || colum[j][value]>1 || subBoxs[i/3][j/3][value]>1){
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
 }

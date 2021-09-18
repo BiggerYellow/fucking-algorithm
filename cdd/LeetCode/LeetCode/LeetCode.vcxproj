@@ -194,6 +194,8 @@
     <ClCompile Include="TreeNode.cpp" />
     <ClCompile Include="treeTraverse.cpp" />
     <ClCompile Include="twoEggDrop.cpp" />
+    <ClCompile Include="uniquePaths.cpp" />
+    <ClCompile Include="uniquePathsWithObstacles.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LeetCode.h" />

@@ -180,6 +180,12 @@
     <ClCompile Include="rotateRight.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="uniquePaths.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="uniquePathsWithObstacles.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LeetCode.h">
