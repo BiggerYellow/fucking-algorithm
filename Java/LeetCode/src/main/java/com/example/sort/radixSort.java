@@ -7,7 +7,7 @@ package com.example.sort;
  */
 public class radixSort {
     public static void main(String[] args) {
-        int[] nums = {1,42,756,23,115,86,54};
+        int[] nums = {1,42,756,22,115,86,54};
         radixSort(nums, 3);
         System.out.println(nums);
     }

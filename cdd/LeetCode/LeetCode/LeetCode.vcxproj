@@ -177,6 +177,7 @@
     <ClCompile Include="merge.cpp" />
     <ClCompile Include="mergeSort.cpp" />
     <ClCompile Include="minPairSum.cpp" />
+    <ClCompile Include="minPathSum.cpp" />
     <ClCompile Include="numberOfArithmeticSlices.cpp" />
     <ClCompile Include="numRescueBoats.cpp" />
     <ClCompile Include="openLock.cpp" />
