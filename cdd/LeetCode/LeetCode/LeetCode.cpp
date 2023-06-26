@@ -3,10 +3,10 @@
 
 #include <iostream>
 #include "LeetCode.h"
-#include "QuickSort.cpp"
+//#include "QuickSort.cpp"
 //#include "mergeSort.cpp"
 //include "treeTraverse.cpp"
-//#include "BinarySearch.cpp"
+#include "BinarySearch.cpp"
 
 using namespace std;
 //extern int findMaxForm(vector<string>& strs, int m, int n);
@@ -22,17 +22,17 @@ int main()
     //vector<string> strs = { "10", "0001", "111001", "1", "0" };
    // printf("%d", findMaxForm(strs, 3,4));
 
-    Solution b;
-    vector<int> nums = { 1,3,2,7,5 };
-    b.quickSort1(nums, 0, nums.size());
-    for (auto i : nums)
-    {
-        cout << i << endl;
-    }
-
     //Solution b;
-    //vector<int> nums = { 1,3,4,5,7,9 };
-    //printf("%d", b.binarySearch(nums, 4));
+    //vector<int> nums = { 1,3,2,7,5 };
+    //b.quickSort(nums, 0, nums.size());
+    //for (auto i : nums)
+    //{
+    //    cout << i << endl;
+    //}
+
+    Solution b;
+    vector<int> nums = { 1,3,4,5,7,9 };
+    printf("%d", b.binarySearch(nums, 4));
 
 
         //Solution b;

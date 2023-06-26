@@ -27,7 +27,7 @@ public:
 		return dp[m - 1][n - 1];
 	}
 
-	int uniquePaths(int m, int n) {
+	int uniquePaths1(int m, int n) {
 		vector<int> dp(n);
 		for (int i = 0; i < n; i++)
 		{
